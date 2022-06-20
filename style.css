@@ -1,0 +1,138 @@
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+/*navigation bar style --------------------------------------------------------------------------------------*/
+
+.navbar {
+    display: flex;                 /*display flex, the default direction is row (use flex on parent tag)*/
+    flex-direction: row;            /*children of this tag display on a row*/
+    justify-content: space-between; /*create space between the "children"*/
+    background-color: #284b63;
+    color: white;
+    padding: 25px 60px;
+    margin-bottom: 30px;
+}
+
+.cart{
+    position: relative;
+    background-color: white;
+    color: #284b63;
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.goodsAmount{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 16px;
+    background-color: #f25c54;
+    color: white;
+    padding: 1px 4px; 
+    border-radius: 3px; 
+}
+
+/* product start here ----------------------------------------------------------------------------------------*/
+
+.products {
+    display: grid;                  /*display grid template on children tag*/
+    grid-template-columns: repeat(2, 270px);/*how many columns ? inside function repeat(columns, width) */
+    gap: 100px;
+    justify-content: center;        /*align the 'children' to the center*/
+    margin-top: 70px;
+}
+
+/* @media (max-width: 1000px) {         /*responsive. when window width hit below 1000px...*/
+/*    .products {                    
+        grid-template-columns: repeat(2, 220px);    /*...this tag take effect*/
+/*    }
+} */
+
+.item {                             /*children of product*/
+    border: 2px solid #284b63;
+    border-radius: 4px;
+    
+}
+
+.item img{
+    height: fit-content;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;                      /*adjust gap between the children*/
+}
+
+.details h3 {                       /*item name*/
+    color: #284b63;
+    font-size: 15px;
+}
+
+.price-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /*x-axis*/
+    align-items: center;            /*align the children center y-axis */
+}
+
+.price-quantity h2 {                /*the price*/
+    font-style: italic;
+    font-size: 17px;
+    color: #f25c54;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* pagination ----------------------------------------------------------------------------------------*/
+
+.pagination-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.button-pag {
+    background-color: white;
+    color: #284b63;
+    font-size: 16px;
+    line-height: 42px;
+    min-width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+    margin: 0px 2px;
+    cursor: pointer;
+}
+
+.button-prev {
+    font-size: large;
+}
+
+.button-next {
+    font-size: large;
+}
+
+.button-pag:hover {
+    border-style: solid;
+    border-color: #284b63;
+    border-width: 2px;
+}
+
